@@ -36,6 +36,7 @@
     </head>
     <body>
         {{- block "main" . }}{{- end }}
+        <footer><p><a href="https://github.com/ThinkMake/hugo-long-read">Hugo Long Read theme</a> based on <a href="https://clig.dev">Command Line Interface Guidelines</a>, designed by <a href="https://mhurrell.co.uk">Mark Hurrell</a></p></footer>
         {{ $js := resources.Get "js/main.js" }}
         <script src="{{ $js.Permalink }}"></script>
     </body>
