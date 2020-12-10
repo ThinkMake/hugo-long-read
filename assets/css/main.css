@@ -2,13 +2,13 @@
    font-family: 'HLR'; 
    font-style: normal; 
    font-weight: 400; 
-   src: url(/fonts/texgyreschola-regular.otf) format('opentype');
+   src: url(/fonts/IBMPlexSerif-Light.otf) format('opentype');
 }
 @font-face {
    font-family: 'HLR'; 
    font-style: italic; 
    font-weight: 400; 
-   src: url(/fonts/texgyreschola-italic.otf) format('opentype');
+   src: url(/fonts/IBMPlexSerif-LightItalic.otf) format('opentype');
 }
 @font-face {
    font-family: 'HLR'; 
@@ -26,13 +26,13 @@
    font-family: 'CLIG-PRE'; 
    font-style: normal; 
    font-weight: 400; 
-   src: url(/fonts/SourceCodePro-Regular.otf) format('opentype');
+   src: url(/fonts/IBMPlexMono-Regular.otf) format('opentype');
 }
 @font-face {
    font-family: 'CLIG-PRE'; 
    font-style: normal; 
    font-weight: 800; 
-   src: url(/fonts/SourceCodePro-Bold.otf) format('opentype');
+   src: url(/fonts/IBMPlexMono-Bold.otf) format('opentype');
 }
 
 * {
@@ -62,7 +62,7 @@ html {
 
 body {
    font-size: 3.9rem;
-   line-height: 1.3;
+   line-height: 1.5;
 }
 @media (min-width: 600px) {
    body {
@@ -116,7 +116,7 @@ body {
       position: -webkit-sticky;
       position: sticky;
       top: 0;
-      padding: calc(1.3em *0.5) 0;
+      padding: calc(1.5em *0.5) 0;
       height: 100vh;
       box-sizing: border-box;
       overflow: auto;
@@ -130,7 +130,7 @@ body {
 
 @media (min-width: 901px) and (min-height: 800px) {
    #TableOfContents > ul {
-      padding-top: 1.3em;
+      padding-top: 1.5em;
    }
 }
 
@@ -161,11 +161,12 @@ body {
       left: 0;
       right: 0;
       text-align: right;
-      padding: calc(1.3em *0.5) 1.3em;
+      padding: calc(1.5em *0.5) 1.5em;
       z-index: 200;
       border: none;
       background: none;
       cursor: pointer;
+      font-weight: 800;
    }
    .menu-open #menu-button {
       display: none;
@@ -174,7 +175,9 @@ body {
       display: none;
       position: fixed;
       overflow: scroll;
-      padding: calc(1.3em *0.5) 0 1.3em;
+      padding: calc(1.5em *0.5) 0 1.5em;
+      font-weight: 800;
+      line-height: 1.2;
    }
    .menu-open #TableOfContents {
       display: block;
@@ -192,29 +195,24 @@ body {
    }
    #TableOfContents a {
       display: inline-block;
-      opacity: 0.5;
+      opacity: 0.7;
       transition: opacity 0.3s ease;
    }
 }
 
 #TableOfContents > ul > li {
-   padding: 0 1.3em;
-}
-
-#TableOfContents ul li + li {
-   padding-top: calc(1.3em *0.125);
+   padding: 0 1.5em;
 }
 
 #TableOfContents ul ul {
-   padding-top: 0.5em;
-   padding-left: 1.3em;
+   padding: calc(1.5em * 0.25) 0 calc(1.5em * 0.25) 1.5em;
    font-size: 66%;
 }
 
 #TableOfContents ul ul li {
    margin-top: 0;
    border-top: none;
-   padding: calc(1.3em * 0.05) 0;
+   padding: calc(1.5em * 0.05) 0;
 }
 
 }
@@ -238,76 +236,66 @@ body {
 }
 
 main {
-   padding: 0 1.3em;
+   padding: 0 1.5em;
 }
 
 @media (min-width: 901px) {
-   #command-line-interface-guidelines > section {
+   main > section > section {
       padding-left: 25%;
    }
 }
 
-#command-line-interface-guidelines > h1 {
+main > section > h1 {
    position: relative;
    height: 75vh;
-   margin: 0 auto;
+   max-width: 10em;
+   margin: 0;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
+   /* text-align: center; */
    box-sizing: border-box;
-   padding: 0.5em 0 0;
-   text-align: center;
-   font-size: 15.5vw;
+   padding: calc(1.5em * 0.1) 0 0;
+   font-size: 14vw;
    left: -0.025em;
    line-height: 1;
    letter-spacing: -0.05em;
-   max-width: 6em;
    font-weight: 800;
 }
 @media (max-width: 750px) and (orientation: landscape) {
-   #command-line-interface-guidelines > h1 {
+   main > section > h1 {
       font-size: 10vw;
    }
 }
-@media (min-width: 750px) {
-   #command-line-interface-guidelines > h1 {
-      font-size: 16.5vw;
+@media (min-width: 1000px) {
+   main > section > h1 {
+      font-size: 150px;
    }
 }
 @media (min-width: 120vh) {
-   #command-line-interface-guidelines > h1 {
-      font-size: 19vh;
-   }
-}
-@media (min-width: 120vh) {
-   #command-line-interface-guidelines > h1 {
-      font-size: 20vh;
-      max-width: 6em;
-      margin: 0 auto;
+   main > section > h1 {
+      font-size: 16vh;
    }
 }
 
-#command-line-interface-guidelines > h1 + p {
+main > section > h1 + p {
    position: relative;
    height: 25vh;
    display: table-cell;
-   vertical-align: middle;
+   vertical-align: bottom;
    margin: 0 auto;
    box-sizing: border-box;
-   padding: 0 0 1.3em;
-   text-align: center;
+   padding: 0 0 1.5em;
    max-width: 35em;
-   left: 50vw;
-   transform: translate(-57%, 0);
-   font-style: italic;
+   font-weight: 800;
 }
 
-#command-line-interface-guidelines > h1 + p a {
+main > section > h1 + p a {
    display: inline;
 }
 
 .github-button {
-   margin: 1.3em auto;
+   margin: 1.5em auto;
 }
 
 /* HACK: this makes the table of contents highlighting work when you click on a link in the table of contents */
@@ -319,15 +307,15 @@ section section:after {
    content: " ";
    display: block;
    width: 100%;
-   height: calc(33vh - (1.3em * 2));
+   height: calc(33vh - (1.5em * 2));
 }
 
 h2, h3 {
    position: -webkit-sticky;
    position: sticky;
    top: 0;
-   margin: 0 auto;
-   padding: calc(1.3em *0.5) 7em calc(1.3em *0.5) 0;
+   margin: 0 auto 0;
+   padding: calc(1.5em *0.5) 7em calc(1.5em *0.5) 0;
    z-index: 50;
    font-weight: 800;
 }
@@ -338,7 +326,7 @@ h3 {
 
 @media (min-width: 901px) and (min-height: 800px) {
    h2, h3 {
-      padding-top: 1.3em;
+      padding-top: 1.5em;
       padding-right: 0;
    }
 }
@@ -349,13 +337,13 @@ h3:before {
    font-weight: 400;
    padding-right: 0.5em;
    position: relative;
-   opacity: 0.5;
+   opacity: 0.7;
 }
 
 h2:after, h3:after {
    content: " ";
    position: absolute;
-   top: calc(1.3em *-0.5);
+   top: calc(1.5em *-0.5);
    left: 0;
    right: 0;
    bottom: 0;
@@ -363,7 +351,8 @@ h2:after, h3:after {
 }
 
 h4, h5, h6 {
-   padding: calc(1.3em *0.5) 0;
+   padding: calc(1.5em *0.5) 0;
+   font-weight: 800;
 }
 
 h1 a.permalink {
@@ -378,7 +367,7 @@ a.permalink {
    font-weight: 400;
    text-decoration: none;
    margin-left: 0.5em;
-   opacity: 0.5;
+   opacity: 0.7;
 }
 
 @media (max-width: 900px) {
@@ -404,13 +393,13 @@ a.permalink:focus::after {
 main p, 
 main ol, 
 main ul {
-   margin: 1.3em 0;
+   margin: 1.5em 0;
    font-weight: 400;
 }
 
 main ol li, 
 main ul li {
-   padding-left: 2.2em;
+   padding-left: 3em;
 }
 
 main ul li {
@@ -421,8 +410,8 @@ main ul li:before {
    content: " ";
    position: relative;
    float: left;
-   margin-left: -1.3em;
-   top: 0.4em;
+   margin-left: -1.5em;
+   top: 0.45em;
    width: 0.6em;
    height: 0.6em;
    border-radius: 50%;
@@ -440,8 +429,9 @@ main ol > li {
 main ol > li:before {
    content: counter(ordered-list)". ";
    float: left;
-   min-width: 2.2em;
-   margin-left: -2.2em;
+   min-width: 3em;
+   margin-left: -3em;
+   text-align: center;
 }
 
 main a {
@@ -453,7 +443,7 @@ main strong {
 }
 
 h2+p, h3+p {
-   margin-top: calc(1.3em *0.5);
+   margin-top: calc(1.5em *0.5);
 }
 
 code {
@@ -471,6 +461,7 @@ pre {
    font-size: 14px;
    line-height: 1.8;
    color: white;
+   border-radius: 5px;
 }
 
 pre code {
@@ -478,6 +469,7 @@ pre code {
    overflow-x: auto;
    padding: 3em 3rem;
    font-weight: 400;
+   border-radius: 0 0 3px 3px;
 }
 
 pre code strong {
@@ -487,6 +479,9 @@ pre code strong {
 @media (min-width: 750px) {
    #command-line-interface-guidelines section h2,
    #command-line-interface-guidelines section h3,
+   #command-line-interface-guidelines section h4,
+   #command-line-interface-guidelines section h5,
+   #command-line-interface-guidelines section h6,
    #command-line-interface-guidelines section p,
    #command-line-interface-guidelines section ol,
    #command-line-interface-guidelines section ul,
@@ -495,32 +490,32 @@ pre code strong {
       margin-left: auto;
       margin-right: auto;
       max-width: 78rem;
-      /* position: relative; */
-      left: 3%;
    }
 }
 
 @media (min-width: 900px) {
    #command-line-interface-guidelines section h2,
    #command-line-interface-guidelines section h3,
+   #command-line-interface-guidelines section h4,
+   #command-line-interface-guidelines section h5,
+   #command-line-interface-guidelines section h6,
    #command-line-interface-guidelines section p,
    #command-line-interface-guidelines section ol,
    #command-line-interface-guidelines section ul,
    #command-line-interface-guidelines section pre,
    #command-line-interface-guidelines section iframe {
-      max-width: 50rem;
-      left: 0;
+      max-width: 60rem;
    }
 }
 
 footer {
-   padding: 1.3em;
+   padding: 1.5em;
    grid-column: 1 / 3;
 }
 footer p {
    font-size: 50%;
-   text-align: center;
    font-style: italic;
+   opacity: 0.7;
 }
 footer a {
    font-style: normal;
@@ -534,7 +529,7 @@ footer a {
 
 
 body {
-   color: rgba(0,0,0,1);
+   color: rgba(255,0,0,1);
    background: rgba(255,255,255,1);
 }
 #TableOfContents {
@@ -545,32 +540,41 @@ h2:after, h3:after {
    box-shadow: 0 0 25px rgba(255,255,255,1);
 }
 main ul li:before {
-   background: rgba(0,0,0,1);
+   background: rgba(255,0,0,1);
 }
 code {
-   background: rgba(126,126,126,0.4);
+   background: rgba(255,0,0,0.3);
 }
 pre {
-   background: rgba(126,126,126,0.4);
+   background: rgba(255,0,0,0.3);
 }
 pre code {
    color: rgb(255,255,255,1);
-   background: rgb(0,0,0,1);
+   background: rgba(126,0,0,0.5);
 }
 @media (prefers-color-scheme: dark) {
    body {
       color: rgba(255,255,255,1);
-      background: rgba(0,0,0,1);
+      background: rgba(255,0,0,1);
    }
    #TableOfContents {
-      background: rgba(0,0,0,0.6);
+      background: rgba(255,0,0,0.6);
    }
    h2:after, h3:after {
-      background: rgba(0,0,0,1);
-      box-shadow: 0 0 25px rgba(0,0,0,1);
+      background: rgba(255,0,0,1);
+      box-shadow: 0 0 25px rgba(255,0,0,1);
    }
    main ul li:before {
       background: rgba(255,255,255,1);
+   }
+   code {
+      background: rgba(126,0,0,0.3);      
+   }
+   pre {
+      background: rgba(126,0,0,0.3);
+   }
+   pre code {
+      background: rgba(126,0,0,0.5);
    }
 }
 
