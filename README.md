@@ -6,6 +6,18 @@ Hugo Long Read is based on the design for the [Command Line Interface Guidelines
 
 The main portion of this document uses an extract from [The Platinum Metals (1920)](https://www.gutenberg.org/files/64068/64068-h/64068-h.htm) by by A. D. Lumb, published by Project Gutenberg.
 
+## Important
+
+This theme is a **single page theme**. There is no support for multi-page websites, and the navigation you can see in the screenshots below is a table of contents generated from the page headers. If you are looking for a more traditional website theme with support for navigation and index pages, this is not for you!
+
+## Screenshots
+
+![Template Header Area](https://raw.githubusercontent.com/ThinkMake/hugo-long-read/main/content/screenshot-1.jpg)
+
+![Content and table of contents](https://raw.githubusercontent.com/ThinkMake/hugo-long-read/main/content/screenshot-2.jpg)
+
+![Dark mode](https://raw.githubusercontent.com/ThinkMake/hugo-long-read/main/content/screenshot-3.jpg)
+
 ## Fonts
 
 Hugo Long Read uses three typefaces; [IBM Plex Serif](https://github.com/IBM/plex/tree/master/IBM-Plex-Serif) for body text, [IBM Plex Mono](https://github.com/IBM/plex/tree/master/IBM-Plex-Mono) for code examples and [TeX Gyre Heros](https://ctan.org/pkg/tex-gyre-heros) for headings. All font files are provided by their creators under the [Open Font License](https://www.ctan.org/license/ofl) (OFL).
