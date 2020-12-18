@@ -3,40 +3,32 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" media="screen" href="/css/main.css">
+        <link rel="stylesheet" media="print" href="/css/print.css">
+
+        <!-- Update these to match your content -->        
+
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
 
-        <title>Command Line Interface Guidelines</title>
+        <title>Hugo Long Read</title>
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Command Line Interface Guidelines" />
-        <meta property="og:title"  content="Command Line Interface Guidelines" />
+        <meta name="twitter:title" content="Hugo Long Read" />
+        <meta property="og:title"  content="Hugo Long Read" />
         
-        <meta name="description"         content="An open-source guide to help you write better command-line programs, taking traditional UNIX principles and updating them for the modern day." />
-        <meta name="twitter:description" content="An open-source guide to help you write better command-line programs, taking traditional UNIX principles and updating them for the modern day." />
-        <meta property="og:description"  content="An open-source guide to help you write better command-line programs, taking traditional UNIX principles and updating them for the modern day." />
+        <meta name="description"         content="A simple open-source Hugo theme for lengthly single page websites, designed by Mark Hurrell" />
+        <meta name="twitter:description" content="A simple open-source Hugo theme for lengthly single page websites, designed by Mark Hurrell" />
+        <meta property="og:description"  content="A simple open-source Hugo theme for lengthly single page websites, designed by Mark Hurrell" />
         
         <meta name="twitter:image" content="https://clig.dev/CLIG-social-card.jpg" />
         <meta property="og:image"  content="https://clig.dev/CLIG-social-card.jpg" />
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLXNEPQY85"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-DLXNEPQY85');
-        </script>
-
-        {{ $css := resources.Get "css/main.css" | resources.ToCSS }}
-        <link rel="stylesheet" media="screen" href="/css/main.css">
-        <link rel="stylesheet" media="print" href="/css/print.css">
     </head>
     <body>
         {{- block "main" . }}{{- end }}
-        <footer><p><a href="https://github.com/ThinkMake/hugo-long-read">Hugo Long Read theme</a> based on <a href="https://clig.dev">Command Line Interface Guidelines</a>, designed by <a href="https://mhurrell.co.uk">Mark Hurrell</a></p></footer>
         {{ $js := resources.Get "js/main.js" }}
         <script src="{{ $js.Permalink }}"></script>
     </body>
